@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int cantH, cantHQ, cantP, cantS;
+    double total = 0;
+    
+    cout << "Hamburguesas (3 Bs): ";
+    cin >> cantH;
+    cout << "Hamburguesas con queso (5 Bs): ";
+    cin >> cantHQ;
+    cout << "Papas fritas (2 Bs): ";
+    cin >> cantP;
+    cout << "Soda (2.5 Bs): ";
+    cin >> cantS;
+    
+    double subH = cantH * 3.0;
+    double subHQ = cantHQ * 5.0;
+    double subP = cantP * 2.0;
+    double subS = cantS * 2.5;
+    
+    total = subH + subHQ + subP + subS;
+    
+    cout << "\n--- RECIBO ---" << endl;
+    cout << "Hamburguesa        " << cantH << " x 3.00   = " << subH << endl;
+    cout << "Hamb. con queso    " << cantHQ << " x 5.00   = " << subHQ << endl;
+    cout << "Papas fritas       " << cantP << " x 2.00   = " << subP << endl;
+    cout << "Soda               " << cantS << " x 2.50   = " << subS << endl;
+    cout << "TOTAL:                        " << total << " Bs" << endl;
+    
+    return 0;
+}
