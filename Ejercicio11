@@ -1,25 +1,23 @@
-#include <iostream>
-using namespace std;
-
+#include <stdio.h>
 int main() {
     double peso;
-    cout << "Peso de la carta (gramos): ";
-    cin >> peso;
+    printf("Peso de la carta (gramos): ");
+    scanf("%lf", &peso);
     
     if (peso <= 0) {
-        cout << "Peso invalido" << endl;
+        printf("Peso invalido\n");
     } else if (peso <= 50) {
-        cout << "Costo: Bs. 1.50" << endl;
+        printf("Costo: Bs. 1.50\n");
     } else if (peso <= 100) {
-        cout << "Costo: Bs. 4.00" << endl;
+        printf("Costo: Bs. 4.00\n");
     } else if (peso <= 200) {
-        cout << "Costo: Bs. 6.00" << endl;
+        printf("Costo: Bs. 6.00\n");
     } else if (peso <= 350) {
-        cout << "Costo: Bs. 10.50" << endl;
+        printf("Costo: Bs. 10.50\n");
     } else if (peso <= 500) {
-        cout << "Costo: Bs. 15.00" << endl;
+        printf("Costo: Bs. 15.00\n");
     } else {
-        cout << "NO PUEDE ENVIAR COMO CARTA" << endl;
+        printf("NO PUEDE ENVIAR COMO CARTA\n");
     }
     
     return 0;
