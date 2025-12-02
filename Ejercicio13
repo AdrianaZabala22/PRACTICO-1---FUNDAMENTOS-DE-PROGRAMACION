@@ -1,30 +1,29 @@
-#include<iostream>
-#include<cmath>
-using namespace std;
-
+#include <stdio.h>
+#include <math.h>
 int main() {
-    double a, b, c;
-    cout << "Ecuacion: ax^2 + bx + c = 0" << endl;
-    cout << "a = "; cin >> a;
-    cout << "b = "; cin >> b;
-    cout << "c = "; cin >> c;
+    double a, b, c, discriminante;
+    
+    printf("Ecuacion: ax^2 + bx + c = 0\n");
+    printf("a = "); scanf("%lf", &a);
+    printf("b = "); scanf("%lf", &b);
+    printf("c = "); scanf("%lf", &c);
     
     if (a == 0) {
-        cout << "No es cuadratica (a no puede ser 0)" << endl;
+        printf("No es ecuacion cuadratica (a no puede ser 0)\n");
         return 0;
     }
     
-    double discriminante = b*b - 4*a*c;
+    discriminante = b*b - 4*a*c;
     
     if (discriminante > 0) {
         double x1 = (-b + sqrt(discriminante)) / (2*a);
         double x2 = (-b - sqrt(discriminante)) / (2*a);
-        cout << "Dos soluciones reales: x1 = " << x1 << ", x2 = " << x2 << endl;
+        printf("Dos soluciones reales:\nx1 = %.4lf\nx2 = %.4lf\n", x1, x2);
     } else if (discriminante == 0) {
         double x = -b / (2*a);
-        cout << "Solución doble: x = " << x << endl;
+        printf("Solución doble: x = %.4lf\n", x);
     } else {
-        cout << "No hay soluciones reales (discriminante negativo)" << endl;
+        printf("No hay soluciones reales (discriminante negativo)\n");
     }
     
     return 0;
