@@ -1,19 +1,17 @@
-#include <iostream>
-using namespace std;
-
+#include <stdio.h>
 int main() {
-    double parciales, final, proyecto;
+    double parciales, final, proyecto, notaFinal;
     
-    cout << "Nota de los 3 parciales (sobre 40): ";
-    cin >> parciales;
-    cout << "Nota del examen final (sobre 40): ";
-    cin >> final;
-    cout << "Nota del proyecto final (sobre 20): ";
-    cin >> proyecto;
+    printf("Nota de los 3 parciales (sobre 40): ");
+    scanf("%lf", &parciales);
+    printf("Nota del examen final (sobre 40): ");
+    scanf("%lf", &final);
+    printf("Nota del proyecto final (sobre 20): ");
+    scanf("%lf", &proyecto);
     
-    double notaFinal = parciales + final + proyecto;
+    notaFinal = parciales + final + proyecto;
     
-    cout << "La nota final es: " << notaFinal << "/100" << endl;
+    printf("La nota final es: %.2lf / 100\n", notaFinal);
     
     return 0;
 }
