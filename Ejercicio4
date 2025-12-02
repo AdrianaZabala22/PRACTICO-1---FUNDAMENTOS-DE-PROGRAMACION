@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string nombre;
+    double horas, precioHora;
+    
+    cout << "Nombre del trabajador: ";
+    cin >> nombre;
+    cout << "Horas trabajadas al mes: ";
+    cin >> horas;
+    cout << "Precio por hora: ";
+    cin >> precioHora;
+    
+    double salarioBruto = horas * precioHora;
+    double impuesto = 0;
+    
+    if (salarioBruto > 8272) {
+        impuesto = salarioBruto * 0.13;
+    }
+    
+    double salarioNeto = salarioBruto - impuesto;
+    
+    cout << "Salario bruto: " << salarioBruto << " Bs" << endl;
+    cout << "Impuesto RC-IVA: " << impuesto << " Bs" << endl;
+    cout << "Salario neto: " << salarioNeto << " Bs" << endl;
+    
+    return 0;
+}
