@@ -1,17 +1,21 @@
-#include <iostream>
-using namespace std;
-
+#include <stdio.h>
 int main() {
     int h, m, s;
-    cout << "Ingrese hora (24h): ";
-    cin >> h >> m >> s;
+    printf("Ingrese hora en formato 24h (HH MM SS): ");
+    scanf("%d %d %d", &h, &m, &s);
     
-    string periodo = (h >= 12) ? "PM" : "AM";
+    char periodo[3];
+    int hora12 = h;
     
-    if (h == 0) h = 12;
-    if (h > 12) h -= 12;
+    if (h >= 12) {
+        strcpy(periodo, "PM");
+        if (h > 12) hora12 = h - 12;
+    } else {
+        strcpy(periodo, "AM");
+        if (h == 0) hora12 = 12;
+    }
     
-    cout << h << ":" << m << ":" << s << " " << periodo << endl;
+    printf("Hora en formato 12h: %d:%02d:%02d %s\n", hora12, m, s, periodo);
     
     return 0;
 }
