@@ -1,29 +1,27 @@
-#include <iostream>
-using namespace std;
-
+#include <stdio.h>
 int main() {
-    string nombre;
-    double horas, precioHora;
+    char nombre[50];
+    double horas, precioHora, salarioBruto, impuesto = 0, salarioNeto;
     
-    cout << "Nombre del trabajador: ";
-    cin >> nombre;
-    cout << "Horas trabajadas al mes: ";
-    cin >> horas;
-    cout << "Precio por hora: ";
-    cin >> precioHora;
+    printf("Nombre del trabajador: ");
+    scanf("%s", nombre);
+    printf("Horas trabajadas al mes: ");
+    scanf("%lf", &horas);
+    printf("Precio por hora: ");
+    scanf("%lf", &precioHora);
     
-    double salarioBruto = horas * precioHora;
-    double impuesto = 0;
+    salarioBruto = horas * precioHora;
     
     if (salarioBruto > 8272) {
         impuesto = salarioBruto * 0.13;
     }
     
-    double salarioNeto = salarioBruto - impuesto;
+    salarioNeto = salarioBruto - impuesto;
     
-    cout << "Salario bruto: " << salarioBruto << " Bs" << endl;
-    cout << "Impuesto RC-IVA: " << impuesto << " Bs" << endl;
-    cout << "Salario neto: " << salarioNeto << " Bs" << endl;
+    printf("\n--- RESUMEN ---\n");
+    printf("Salario bruto: %.2lf Bs\n", salarioBruto);
+    printf("Impuesto RC-IVA: %.2lf Bs\n", impuesto);
+    printf("Salario neto: %.2lf Bs\n", salarioNeto);
     
     return 0;
 }
