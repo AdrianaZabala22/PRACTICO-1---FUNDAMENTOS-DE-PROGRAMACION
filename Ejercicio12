@@ -1,24 +1,17 @@
-#include <iostream>
-using namespace std;
-
+#include <stdio.h>
 int main() {
     int dia, mes, anio;
-    cout << "Ingrese fecha (dd mm aaaa): ";
-    cin >> dia >> mes >> anio;
+    printf("Ingrese fecha (dd mm aaaa): ");
+    scanf("%d %d %d", &dia, &mes, &anio);
     
-    string estacion;
-    
-    if ((mes == 9 && dia >= 21) || mes == 10 || mes == 11 || (mes == 12 && dia < 21)) {
-        estacion = "PRIMAVERA";
-    } else if ((mes == 12 && dia >= 21) || mes == 1 || mes == 2 || (mes == 3 && dia < 21)) {
-        estacion = "VERANO";
-    } else if ((mes == 3 && dia >= 21) || mes == 4 || mes == 5 || (mes == 6 && dia < 21)) {
-        estacion = "OTOÑO";
-    } else {
-        estacion = "INVIERNO";
-    }
-    
-    cout << "Estacion: " << estacion << endl;
+    if ((mes == 9 && dia >= 21) || mes == 10 || mes == 11 || (mes == 12 && dia < 21))
+        printf("PRIMAVERA\n");
+    else if ((mes == 12 && dia >= 21) || mes == 1 || mes == 2 || (mes == 3 && dia < 21))
+        printf("VERANO\n");
+    else if ((mes == 3 && dia >= 21) || mes == 4 || mes == 5 || (mes == 6 && dia < 21))
+        printf("OTONO\n");
+    else
+        printf("INVIERNO\n");
     
     return 0;
 }
