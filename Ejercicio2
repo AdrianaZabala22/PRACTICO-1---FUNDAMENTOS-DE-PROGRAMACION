@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double D;
+    cout << "Ingrese el diametro de la esfera: ";
+    cin >> D;
+    
+    double radio = D / 2.0;
+    double pi = 3.14159265359;
+    
+    double circunferencia = 2 * pi * radio;
+    double area = 4 * pi * pow(radio, 2);
+    double volumen = (4.0 / 3.0) * pi * pow(radio, 3);
+    
+    cout << "Circunferencia: " << circunferencia << endl;
+    cout << "Area: " << area << endl;
+    cout << "Volumen: " << volumen << endl;
+    
+    return 0;
+}
