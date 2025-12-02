@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    double parciales, final, proyecto;
+    
+    cout << "Nota de los 3 parciales (sobre 40): ";
+    cin >> parciales;
+    cout << "Nota del examen final (sobre 40): ";
+    cin >> final;
+    cout << "Nota del proyecto final (sobre 20): ";
+    cin >> proyecto;
+    
+    double notaFinal = parciales + final + proyecto;
+    
+    cout << "La nota final es: " << notaFinal << "/100" << endl;
+    
+    return 0;
+}
