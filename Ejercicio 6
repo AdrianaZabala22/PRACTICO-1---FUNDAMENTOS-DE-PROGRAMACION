@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int h, m, s;
+    cout << "Ingrese hora (24h): ";
+    cin >> h >> m >> s;
+    
+    string periodo = (h >= 12) ? "PM" : "AM";
+    
+    if (h == 0) h = 12;
+    if (h > 12) h -= 12;
+    
+    cout << h << ":" << m << ":" << s << " " << periodo << endl;
+    
+    return 0;
+}
